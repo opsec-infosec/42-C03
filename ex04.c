@@ -12,7 +12,7 @@ int main(void) {
 	char needle[] = "AbuDhabi";
 	char needle1[] = "vmj92293bv";
 	char empty[] = {0x00};
-	char havstack[] = "What Makes AbuDhabi 42 Great";
+	char havstack[] = "What A Makes AbuDhabi 42 Great";
 
 	printf("str = %s | to_find = %s \n",havstack,needle);
 	printf("Calling: ret = ft_strstr(str,to_find);\n");

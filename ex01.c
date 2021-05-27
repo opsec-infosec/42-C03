@@ -1,18 +1,18 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
-
+#include <stdlib.h>
 #include "../ex01/ft_strncmp.c"
 
 int ft_strncmp(char *s1, char *s2, unsigned int n);
 
-int main(void) {
+int main() {
 	
-	char str_cmp1[] = "ABCDEFAQrSt";
-	char str_cmp2[] = "ABCDEFZQrSt";
+	char str_cmp1[12] = "ABCDEFAQrSt";
+	char str_cmp2[12] = "ABCDEFZQrSt";
 	char empty[] = "";
 	unsigned int ret;
-	
+
 	printf("Calling ft_strncpy(s1,s2,n);\n");
     ret=ft_strncmp(str_cmp1,str_cmp2,6);
 	if (ret == 0)
@@ -38,6 +38,12 @@ int main(void) {
 		printf("Comparing [s1] %s with [s2] \"\" n = 9          | PASS ret %d\n",str_cmp2,ret);
 	else
 		printf("Comparing [s1] %s with [s2] \"\" n = 9          | FAIL ret %d\n",str_cmp2,ret);
+
+	ret=ft_strncmp("ZBACD","ABACD",0);
+	if ((int)ret == 0)
+		printf("Comparing [s1] ZBACD with [s2] ABACD n = 0             | PASS ret %d\n",ret);
+	else
+		printf("Comparing [s1] ZBACD with [s2] ABACD n = 0             | FAIL ret %d\n",ret);
 
 	return (0);
 }
