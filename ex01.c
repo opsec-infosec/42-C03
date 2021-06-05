@@ -13,7 +13,7 @@ int main() {
 	char empty[] = "";
 	unsigned int ret;
 
-	printf("Calling ft_strncpy(s1,s2,n);\n");
+	printf("Calling ft_strncmp(s1,s2,n);\n");
     ret=ft_strncmp(str_cmp1,str_cmp2,6);
 	if (ret == 0)
 		printf("Comparing [s1] %s with [s2] %s n = 6 | PASS ret %d\n",str_cmp1,str_cmp2,ret);
